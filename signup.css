@@ -5,12 +5,16 @@
     padding: 0rem;
     box-sizing: border-box;
     font-family: Inter;
+}
+
+html{
     font-size: 62.5%;
 }
 
 .container{
     display: flex;
-    /* align-items: center; */
+    align-items: end;
+    justify-content: center;
     height: 100vh;
 }
 
@@ -77,7 +81,7 @@
     margin-top: 2rem;
 }
 
-.form_submit{
+.signup_button {
     padding: 1rem 1.8rem;
     background: #1570EF;
     box-shadow: 0rem 0.1rem 0.2rem rgba(16, 24, 40, 0.05);
@@ -92,7 +96,7 @@
     transition: all 0.3s ease 0s;
 }
 
-.form_submit:hover{
+.signup_button:hover {
     background: #1570efdd;
 }
 
@@ -174,4 +178,46 @@ span{
 
 .foot p img{
     margin-right: 0.8rem;
+}
+
+#snack_bar {
+    visibility: hidden;
+    min-width: 15.625rem;
+    background: #FFFFFF;
+    border: 1px solid #CFDAE9;
+    box-shadow: 0px 1.25rem 1.5rem -0.25px rgba(16, 24, 40, 0.1), 0px 0.5rem 0.5rem -0.25rem rgba(16, 24, 40, 0.04);
+    color: #475467;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: fixed;
+    bottom: 5rem;
+    font-size: 16px;
+}
+
+#snack_bar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+  
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 5rem; opacity: 1;}
+}
+ 
+@keyframes fadeout {
+    from {bottom: 5rem; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@media (max-width: 998px) {
+    html{
+        font-size: 55%;
+    }
+
+}
+@media (max-width: 768px) {
+    html{
+        font-size: 45%;
+    }
 }
